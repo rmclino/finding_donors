@@ -12718,8 +12718,10 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Decision-Tree-Classifier">Decision Tree Classifier<a class="anchor-link" href="#Decision-Tree-Classifier">&#182;</a></h3><p>Describe one real-world application in industry where the model can be applied.</p>
 <ul>
-<li>Muito usada em data mining,</li>
+<li>Muito usada em data mining, também usada para detecção de fraudes no setor de seguros, para modelos de escore de risco de crédito no setor bancário e para prever e reduzir o churn de clientes em diversas industrias.</li>
 </ul>
+<blockquote><p><a href="https://www.quora.com/What-are-some-practical-business-uses-of-decision-trees">https://www.quora.com/What-are-some-practical-business-uses-of-decision-trees</a></p>
+</blockquote>
 <p>What are the strengths of the model; when does it perform well?</p>
 <ul>
 <li>Simples de entender e interpretar, necessita de pouca preparação dos dados, possível de validar usando testes estatisticos, performa bem com grandes datasets.</li>
@@ -12734,15 +12736,17 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </ul>
 <h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3><p>Describe one real-world application in industry where the model can be applied.</p>
 <ul>
-<li>Usada no mercado financeiro para classificar se um credito vai ser pago ou não. </li>
+<li>Na vida real pode ser aplicada a problemas de segmentação de imagens e categorização, no processo de imagens geográficas, reconhecimento de escrita e na area de saúde.</li>
 </ul>
+<blockquote><p><a href="https://www.quora.com/What-are-applications-of-linear-and-logistic-regression">https://www.quora.com/What-are-applications-of-linear-and-logistic-regression</a></p>
+</blockquote>
 <p>What are the strengths of the model; when does it perform well?</p>
 <ul>
 <li>De treinamento rapido e com possibilidade de bons resultados.</li>
 </ul>
 <p>What are the weaknesses of the model; when does it perform poorly?</p>
 <ul>
-<li>assume uma fronteira linear entre os dados classificados, ficando assim limitado quando existem fronteiras complexas entre os atributos.</li>
+<li>Assume uma fronteira linear entre os dados classificados, ficando assim limitado quando existem fronteiras complexas entre os atributos.</li>
 </ul>
 <p>What makes this model a good candidate for the problem, given what you know about the data?</p>
 <ul>
@@ -12752,6 +12756,8 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <ul>
 <li>É usado em diferentes campos, como bancário, investimentos em bolsa de valores, medicina e e-commerce. Na bolsa investidores usam para determinar o comportamente do preço de uma ação no futuro (se compra ou não baseado nos features de preços de outras ações e indicadores economicos e técnicos).</li>
 </ul>
+<blockquote><p><a href="https://machinelearning-blog.com/2018/02/06/the-random-forest-algorithm/">https://machinelearning-blog.com/2018/02/06/the-random-forest-algorithm/</a></p>
+</blockquote>
 <p>What are the strengths of the model; when does it perform well?</p>
 <ul>
 <li>Modelo fácil de usar, bom para grandes datasets (o que pode ser o caso de se usar dados do pais inteiro) e também por ser um método que usa muitas arvores tende a reduzir a variancia dos resultados.</li>
@@ -12764,8 +12770,6 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <ul>
 <li>Tem boa performance com variaveis categoricas. Nosso modelo tem bastante variaveis assim.</li>
 </ul>
-<blockquote><p>fonte: <a href="https://scikit-learn.org/stable/modules/naive_bayes.html">https://scikit-learn.org/stable/modules/naive_bayes.html</a></p>
-</blockquote>
 
 </div>
 </div>
@@ -13037,8 +13041,10 @@ Avaliando a questão do tempo e do F-Score eu acredito que a regressão logistic
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <ul>
-<li>O nosso modelo escolhido Logistic Regression, também conhecido como LOGIT. O modelo através de uma função logistica, uma black box, estima o resultado com base nos inputs colocados no sistema. O modelo no treinamento estima pesos para cada atributo. Assim quando queremos estimar o resultado em um novo dado ou conjunto de dados ele usa esses pesos para calcular um score que vai nos dizer se o resultado é 1 ou 0 (duas possibilidades).</li>
+<li>O meu modelo escolhido foi o Logistic Regression, também conhecido como LOGIT. Vou tentar explicar de modo bem simples: é um processo onde entramos com dados, que cuidamos para estar no jeito, colocamos para treinar num computador junto com as respostas corretas e então com base nesse treinamento temos um jeito de que quando colocamos um novo problema para ele responder vai sair uma resposta se vai ser de um jeito ou não. Exemplo, queremos saber se um aluno vai entrar ou não numa faculdade. A gente pega a ficha de diversos candidatos que ja entraram ou não nessa faculdade, processa esses dados, assim criamos um modelo que vai nos dar uma resposta vai passar ou não para futuros candidatos.</li>
 </ul>
+<blockquote><p><a href="https://medium.com/data-science-group-iitr/logistic-regression-simplified-9b4efe801389">https://medium.com/data-science-group-iitr/logistic-regression-simplified-9b4efe801389</a></p>
+</blockquote>
 
 </div>
 </div>
@@ -13194,7 +13200,15 @@ Final F-score on the testing data: 0.6834
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Pelas caracteristicas do algoritimo nao tivemos um incremento de performance muito superior.</p>
+<p><strong>Answer: </strong></p>
+<ul>
+<li><p>Pelas caracteristicas do algoritimo não tivemos um incremento de performance muito superior. Acredito que o modelo inicial já faz um trabalho muito bem feito. Talvez um modelo randomico pudesse ter uma diferença maior (modelo fosse um random forest).</p>
+</li>
+<li><p>Os resultados foram melhores marginalmente melhores o que talvez não justifique alterar o modelo por conta do tempo de processamento. Um incremento de 0,0002/0,6832. Fiz diversas mudanças nos parametros, mudei os penaltys, os solvers e esse resultado foi o melhor que tive (for the record).</p>
+</li>
+<li><p>Em relação ao resultado inicial que teve resultados [Accuracy score: 0.2478, F-score: 0.2917] obtivemos um modelo muito superior com um F-Score mais que o dobro.</p>
+</li>
+</ul>
 
 </div>
 </div>
